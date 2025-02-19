@@ -18,13 +18,13 @@ const CharacterDetails = () => {
   if (error) return <p>Error fetching details: {error.message}</p>;
 
   return (
-    <div>
+    <>
       <h2>{data.name}</h2>
       <img src={data.image} alt={data.name} />
       <p>Status: {data.status}</p>
       <p>Species: {data.species}</p>
       <p>Origin: {data.origin.name}</p>
-    </div>
+    </>
   );
 };
 

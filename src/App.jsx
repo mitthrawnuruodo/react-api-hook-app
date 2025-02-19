@@ -4,7 +4,7 @@ import CharacterDetails from './components/CharacterDetails';
 
 const App = () => {
   return (
-    <div>
+    <>
       <header>
         <h1>Rick and Morty Characters</h1>
         <nav>
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/character/:id" element={<CharacterDetails />} />
         </Routes>
       </main>
-    </div>
+    </>
   );
 };
 

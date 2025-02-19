@@ -9,7 +9,7 @@ const CharacterList = () => {
   if (error) return <p>Error fetching characters: {error.message}</p>;
 
   return (
-    <div>
+    <>
       <h2>Characters</h2>
       <ul>
         {data.results.map((character) => (
@@ -19,7 +19,7 @@ const CharacterList = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 
