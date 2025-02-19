@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import useFetch from '../hooks/useFetch';
+import LastViewed from './LastViewed';
 
 const CharacterList = () => {
   // Rick and Morty API endpoint for characters
@@ -9,7 +10,7 @@ const CharacterList = () => {
   if (error) return <p>Error fetching characters: {error.message}</p>;
 
   return (
-    <div>
+    <>
       <h2>Characters</h2>
       <ul>
         {data.results.map((character) => (
@@ -19,7 +20,9 @@ const CharacterList = () => {
           </li>
         ))}
       </ul>
-    </div>
+      {/* Display the last viewed component */}
+      <LastViewed />
+    </>
   );
 };
 
